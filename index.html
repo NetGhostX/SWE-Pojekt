@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernportal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f6f8ff 0%, #f1f5ff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: bounce 1s ease;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .subject-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: var(--accent-color);
+        }
+
+        .mathematik {
+            --accent-color: #60A5FA;
+        }
+
+        .englisch {
+            --accent-color: #34D399;
+        }
+
+        .deutsch {
+            --accent-color: #F472B6;
+        }
+
+        .physik {
+            --accent-color: #A78BFA;
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .subject-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .start-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+            text-decoration: none;
+        }
+
+        .start-button:hover {
+            opacity: 0.9;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Wähle dein Lieblingsfach! 🚀</h1>
+    <div class="container">
+        <div class="subject-card mathematik">
+            <div class="icon">🔢</div>
+            <h2 class="subject-name">Mathematik</h2>
+            <p class="description">Löse spannende Aufgaben und werde zum Mathe-Champion!</p>
+            <a href="./mathe/mathe.html" class="start-button">Jetzt rechnen!</a>
+        </div>
+        
+        <div class="subject-card englisch">
+            <div class="icon">📚</div>
+            <h2 class="subject-name">Englisch</h2>
+            <p class="description">Entdecke neue Wörter und verbessere dein Englisch!</p>
+            <a href="#englisch" class="start-button">Los geht's!</a>
+        </div>
+        
+        <div class="subject-card deutsch">
+            <div class="icon">✍️</div>
+            <h2 class="subject-name">Deutsch</h2>
+            <p class="description">Erkunde Geschichten und verbessere deine Sprache!</p>
+            <a href="#deutsch" class="start-button">Start!</a>
+        </div>
+        
+        <div class="subject-card physik">
+            <div class="icon">⚡</div>
+            <h2 class="subject-name">Physik</h2>
+            <p class="description">Entdecke die spannende Welt der Naturwissenschaften!</p>
+            <a href="#physik" class="start-button">Experimentieren!</a>
+        </div>
+    </div>
+</body>
+</html>
