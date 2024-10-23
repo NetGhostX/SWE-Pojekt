@@ -19,7 +19,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Sidebar Styles */
         .sidebar {
             width: 250px;
             height: 100vh;
@@ -74,7 +73,6 @@
             margin-right: 15px;
         }
 
-        /* Main Content Styles */
         .main-content {
             margin-left: 250px;
             width: calc(100% - 250px);
@@ -96,10 +94,6 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
         }
 
         .topic-card:hover {
@@ -107,23 +101,93 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
+        .topic-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
         .topic-icon {
             font-size: 2.5rem;
-            margin-bottom: 15px;
+            margin-right: 15px;
             color: #4a90e2;
         }
 
         .topic-title {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 10px;
             color: #333;
+        }
+
+        .topic-content {
+            margin-bottom: 20px;
         }
 
         .topic-description {
             font-size: 0.9rem;
             color: #666;
-            line-height: 1.4;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .related-topics {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .related-topics h4 {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .related-topics ul {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .related-topics li {
+            margin-bottom: 4px;
+        }
+
+        .download-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .download-section h4 {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .download-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .download-btn {
+            background: #4a90e2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .download-btn i {
+            margin-right: 8px;
+        }
+
+        .download-btn:hover {
+            background: #357abd;
         }
 
         .progress-bar {
@@ -143,7 +207,6 @@
             transition: width 0.3s ease;
         }
 
-        /* Responsive Design */
         @media (max-width: 900px) {
             .sidebar {
                 transform: translateX(-250px);
@@ -210,119 +273,173 @@
     <div class="main-content">
         <div class="container">
             <div class="topic-card">
-                <i class="fas fa-calculator topic-icon"></i>
-                <h3 class="topic-title">Grundrechenarten</h3>
-                <p class="topic-description">Addition, Subtraktion, Multiplikation und Division mit natürlichen Zahlen</p>
+                <div class="topic-header">
+                    <i class="fas fa-calculator topic-icon"></i>
+                    <h3 class="topic-title">Grundrechenarten</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">
+                        Die vier Grundrechenarten sind die Basis aller mathematischen Operationen. Hier lernst du:
+                        • Addition: Zahlen zusammenzählen
+                        • Subtraktion: Zahlen voneinander abziehen
+                        • Multiplikation: Zahlen vervielfachen
+                        • Division: Zahlen aufteilen
+                    </p>
+                    <div class="related-topics">
+                        <h4>Verwandte Themen:</h4>
+                        <ul>
+                            <li>Zahlenstrahl</li>
+                            <li>Überschlagsrechnen</li>
+                            <li>Kopfrechnen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-section">
+                    <h4>Übungen herunterladen:</h4>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 1
+                        </a>
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 2
+                        </a>
+                    </div>
+                </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 75%"></div>
                 </div>
             </div>
 
             <div class="topic-card">
-                <i class="fas fa-divide topic-icon"></i>
-                <h3 class="topic-title">Bruchrechnung</h3>
-                <p class="topic-description">Einführung in Brüche, Erweitern und Kürzen von Brüchen</p>
+                <div class="topic-header">
+                    <i class="fas fa-divide topic-icon"></i>
+                    <h3 class="topic-title">Bruchrechnung</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">
+                        Brüche sind Teile eines Ganzen. In diesem Kapitel lernst du:
+                        • Was Brüche sind und wie man sie schreibt
+                        • Wie man Brüche erweitert und kürzt
+                        • Gleichnamige und ungleichnamige Brüche
+                        • Rechnen mit Brüchen
+                    </p>
+                    <div class="related-topics">
+                        <h4>Verwandte Themen:</h4>
+                        <ul>
+                            <li>Dezimalzahlen</li>
+                            <li>Prozentrechnung</li>
+                            <li>Verhältnisse</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-section">
+                    <h4>Übungen herunterladen:</h4>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 1
+                        </a>
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 2
+                        </a>
+                    </div>
+                </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 45%"></div>
                 </div>
             </div>
 
             <div class="topic-card">
-                <i class="fas fa-ruler topic-icon"></i>
-                <h3 class="topic-title">Geometrie</h3>
-                <p class="topic-description">Grundformen, Flächen und Umfang von geometrischen Figuren</p>
+                <div class="topic-header">
+                    <i class="fas fa-ruler topic-icon"></i>
+                    <h3 class="topic-title">Geometrie</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">
+                        Geometrie beschäftigt sich mit Formen und Flächen. Du lernst:
+                        • Grundformen kennen und zeichnen
+                        • Umfang und Fläche berechnen
+                        • Mit dem Geodreieck arbeiten
+                        • Symmetrie erkennen
+                    </p>
+                    <div class="related-topics">
+                        <h4>Verwandte Themen:</h4>
+                        <ul>
+                            <li>Winkel</li>
+                            <li>Koordinatensystem</li>
+                            <li>Maßstab</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-section">
+                    <h4>Übungen herunterladen:</h4>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 1
+                        </a>
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 2
+                        </a>
+                    </div>
+                </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 60%"></div>
                 </div>
             </div>
 
             <div class="topic-card">
-                <i class="fas fa-percentage topic-icon"></i>
-                <h3 class="topic-title">Dezimalzahlen</h3>
-                <p class="topic-description">Rechnen mit Dezimalzahlen und Stellenwertsystem</p>
+                <div class="topic-header">
+                    <i class="fas fa-percentage topic-icon"></i>
+                    <h3 class="topic-title">Dezimalzahlen</h3>
+                </div>
+                <div class="topic-content">
+                    <p class="topic-description">
+                        Dezimalzahlen sind Zahlen mit Nachkommastellen. Hier lernst du:
+                        • Das Dezimalsystem verstehen
+                        • Mit Dezimalzahlen rechnen
+                        • Dezimalzahlen runden
+                        • Brüche in Dezimalzahlen umwandeln
+                    </p>
+                    <div class="related-topics">
+                        <h4>Verwandte Themen:</h4>
+                        <ul>
+                            <li>Stellenwertsystem</li>
+                            <li>Bruchrechnung</li>
+                            <li>Maßeinheiten</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-section">
+                    <h4>Übungen herunterladen:</h4>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 1
+                        </a>
+                        <a href="#" class="download-btn">
+                            <i class="fas fa-file-pdf"></i>
+                            Übung 2
+                        </a>
+                    </div>
+                </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 30%"></div>
                 </div>
             </div>
 
             <div class="topic-card">
-                <i class="fas fa-arrows-alt-h topic-icon"></i>
-                <h3 class="topic-title">Längenmaße</h3>
-                <p class="topic-description">Umrechnen von Längeneinheiten und praktische Anwendungen</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 55%"></div>
+                <div class="topic-header">
+                    <i class="fas fa-arrows-alt-h topic-icon"></i>
+                    <h3 class="topic-title">Längenmaße</h3>
                 </div>
-            </div>
-
-            <div class="topic-card">
-                <i class="fas fa-balance-scale topic-icon"></i>
-                <h3 class="topic-title">Gewichte</h3>
-                <p class="topic-description">Gewichtseinheiten und deren Umrechnung</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 40%"></div>
-                </div>
-            </div>
-
-            <div class="topic-card">
-                <i class="fas fa-clock topic-icon"></i>
-                <h3 class="topic-title">Zeitrechnung</h3>
-                <p class="topic-description">Umgang mit Zeiteinheiten und Zeitspannen</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%"></div>
-                </div>
-            </div>
-
-            <div class="topic-card">
-                <i class="fas fa-square-root-alt topic-icon"></i>
-                <h3 class="topic-title">Terme und Gleichungen</h3>
-                <p class="topic-description">Erste Schritte mit mathematischen Ausdrücken</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 25%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const sidebar = document.querySelector('.sidebar');
-        const menuToggle = document.querySelector('.menu-toggle');
-        const searchContainer = document.querySelector('.search-container');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > lastScroll && currentScroll > 50) {
-                searchContainer.style.transform = 'translateY(-100%)';
-            } else {
-                searchContainer.style.transform = 'translateY(0)';
-            }
-            lastScroll = currentScroll;
-        });
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 900) {
-                if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-                    sidebar.classList.remove('active');
-                }
-            }
-        });
-
-        // Animation for progress bars
-        document.querySelectorAll('.topic-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                const progress = card.querySelector('.progress');
-                const width = progress.style.width;
-                progress.style.width = '0%';
-                setTimeout(() => {
-                    progress.style.width = width;
-                }, 50);
-            });
-        });
-    </script>
-</body>
-</html>
+                <div class="topic-content">
+                    <p class="topic-description">
+                        Längenmaße helfen uns, Entfernungen zu messen. Du lernst:
+                        • Verschiedene Längeneinheiten kennen
+                        • Zwischen Einheiten umrechnen
+                        • Praktische Anwendungen
